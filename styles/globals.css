@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer base{
+    *{
+        @apply box-border font-jost
+    }
+
+    html, body, #__next{
+        @apply h-full w-full 
+    }
+
+    h1{
+        @apply font-medium lg:text-5xl lg:leading-[3rem]
+    }
+
+    h2{
+        @apply font-medium lg:text-[40px] lg:leading-[3rem] lg:tracking-[2px]
+    }
+
+    h3{
+        @apply font-medium lg:text-xl lg:leading-[26px] lg:tracking-[5px]
+    }
+
+    p{
+        @apply font-normal lg:text-base lg:leading-[26px] 
+    }
+}
+
+@layer components{
+    .buttonLight{
+        @apply w-[152px] h-[56px] font-medium rounded-lg bg-white text-black text-[15px] tracking-[1px] uppercase hover:text-white hover:bg-peach
+    }
+
+    .buttonDark{
+        @apply w-[152px] h-[56px] font-medium rounded-lg bg-peach text-[15px] tracking-[1px] uppercase text-white hover:bg-lightPeach
+    }
+}
