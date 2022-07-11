@@ -27,7 +27,7 @@ const ProjectCategory = (props: Props) => {
         <div className="h-full flex flex-col justify-center gap-2">
             <h2 className='text-center'>{props.title}</h2>
             <Link href={props.path}>
-                <div className="flex justify-center items-center gap-4">
+                <div className="flex justify-center items-center gap-3">
                     <h3 className="text-[15px]">view project</h3>
                     <img className="w-3 h-3" src={arrow.src} alt="" />
                 </div>

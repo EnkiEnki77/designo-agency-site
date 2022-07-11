@@ -5,6 +5,7 @@ import Button from '../components/Button'
 import FormElement from '../components/FormElement'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import OfferingsCont from '../components/OfferingsCont'
 import ProjectsDirectory from '../components/ProjectsDirectory'
 
 const Home: NextPage = () => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <Header/>
       <Hero/>
       <ProjectsDirectory/>
+      <OfferingsCont/>
     </div>
   )
 }
