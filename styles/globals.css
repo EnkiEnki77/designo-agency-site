@@ -14,19 +14,19 @@
     }
 
     h1{
-        @apply font-medium lg:text-5xl lg:leading-[3rem]
+        @apply font-medium text-[32px] leading-9 md:text-5xl md:leading-[3rem]
     }
 
     h2{
-        @apply font-medium lg:text-[40px] lg:leading-[3rem] lg:tracking-[2px]
+        @apply font-medium text-[28px] leading-9 tracking-[1.4px] md:text-[40px] md:leading-[3rem] md:tracking-[2px]
     }
 
     h3{
-        @apply font-medium lg:text-xl lg:leading-[26px] lg:tracking-[5px]
+        @apply font-medium text-xl leading-[26px] tracking-[5px]
     }
 
     p{
-        @apply font-normal lg:text-base lg:leading-[26px] 
+        @apply font-normal text-[15px] leading-[25px] md:text-base md:leading-[26px] 
     }
 }
 
