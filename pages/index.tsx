@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Button from '../components/Button'
 import FormElement from '../components/FormElement'
 import Header from '../components/Header'
+import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"></link>
       </Head>
       <Header/>
-      
+      <Hero/>
     </div>
   )
 }

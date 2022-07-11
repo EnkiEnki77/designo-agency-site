@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        heroPhone: "url('../public/assets/home/desktop/image-hero-phone.png')",
+      },
+
       colors: {
         peach:'#E7816B',
         lightPeach:'#FFAD9B',
