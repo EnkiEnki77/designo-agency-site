@@ -18,11 +18,11 @@
     }
 
     h2{
-        @apply font-medium text-[28px] leading-9 tracking-[1.4px] md:text-[40px] md:leading-[3rem] md:tracking-[2px]
+        @apply font-medium text-[28px] leading-9 tracking-[1.4px] md:text-[40px] md:leading-[3rem] md:tracking-[2px] uppercase text-white
     }
 
     h3{
-        @apply font-medium text-xl leading-[26px] tracking-[5px]
+        @apply font-medium text-xl leading-[26px] tracking-[5px] text-white uppercase
     }
 
     p{
