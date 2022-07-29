@@ -2,7 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Button from '../components/Button'
+import FooterCont from '../components/FooterCont'
 import FormElement from '../components/FormElement'
+import GetInTouchCont from '../components/GetInTouchCont'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import OfferingsCont from '../components/OfferingsCont'
@@ -22,6 +24,7 @@ const Home: NextPage = () => {
       <Hero/>
       <ProjectsDirectory/>
       <OfferingsCont/>
+      <FooterCont/>
     </div>
   )
 }
