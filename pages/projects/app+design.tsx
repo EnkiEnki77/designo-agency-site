@@ -21,7 +21,7 @@ const appDesign = (props: Props) => {
     <div>
         <Header/>
         <CategoryInfo page='app design' pageInfo='Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'/>
-        <ProjectCont projects={projects}/>
+        <ProjectCont page='app-design' projects={projects}/>
         <ProjectsDirectory page='app design'/>
         <FooterCont/>
     </div>

@@ -7,7 +7,7 @@ type Props = {
 
 const Button = (props: Props) => {
   return (
-    <button className={`${props.btn}`}>{props.children}</button>
+    <button className={`${props.btn} font-bold`}>{props.children}</button>
   )
 }
 

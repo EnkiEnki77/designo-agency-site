@@ -22,7 +22,7 @@ const webDesign = (props: Props) => {
     <div>
         <Header/>
         <CategoryInfo page='web design' pageInfo='We build websites that serve as powerful marketing tools and bring memorable brand experiences.'/>
-        <ProjectCont projects={projects}/>
+        <ProjectCont page='web-design' projects={projects}/>
         <ProjectsDirectory page='web design'/>
         <FooterCont/>
     </div>

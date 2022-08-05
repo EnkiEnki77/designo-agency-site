@@ -8,7 +8,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         heroPhone: "url('../public/assets/home/desktop/image-hero-phone.png')",
-        bgPattern: "url('../public/assets/app-design/desktop/bg-pattern-intro-app.svg')"
+        bgPattern: "url('../public/assets/app-design/desktop/bg-pattern-intro-app.svg')",
+        bgPattern2: "url('../public/assets/shared/desktop/bg-pattern-three-circles.svg')",
+        bgPattern3: "url('../public/assets/about/mobile/bg-pattern-hero-about-mobile.svg')"
       },
 
       colors: {
