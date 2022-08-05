@@ -1,7 +1,9 @@
 import React from 'react'
 import ProjectCategory from './ProjectCategory'
 
-type Props = {}
+type Props = {
+  page: string | null
+}
 
 const ProjectsDirectory = (props: Props) => {
     const categories = [
@@ -18,9 +20,17 @@ const ProjectsDirectory = (props: Props) => {
         path:'/projects/app+design'},
     ]
 
+    const categoriesFiltered = categories.filter(category => category.title !== props.page)
+
+    console.log(categoriesFiltered)
+
   return (
     <div className='flex flex-col px-6 gap-6 mb-24'>
-        {categories.map((item, i) => <ProjectCategory key={i} img={item.img} title={item.title} path={item.path}/>)}
+        {props.page === null ? 
+        categories.map((item, i) => <ProjectCategory key={i} img={item.img} title={item.title} path={item.path}/>)
+          :
+        categoriesFiltered.map((item, i) => <ProjectCategory key={i} img={item.img} title={item.title} path={item.path}/>)
+      }
     </div>
   )
 }
