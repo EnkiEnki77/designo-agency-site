@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         heroPhone: "url('../public/assets/home/desktop/image-hero-phone.png')",
+        bgPattern: "url('../public/assets/app-design/desktop/bg-pattern-intro-app.svg')"
       },
 
       colors: {

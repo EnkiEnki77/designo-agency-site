@@ -12,7 +12,7 @@ const Hero = (props: Props) => {
             <p className="text-center mb-6">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
             <Button btn='buttonLight'>learn more</Button>
         </div>
-        <div className='bg-transparent/0 rounded-lg bg-heroPhone h-[450px] w-full bg-[center_bottom_-23rem] z-20'>
+        <div className='bg-transparent rounded-lg bg-heroPhone h-[450px] w-full bg-[center_bottom_-23rem] z-20'>
             {/* <img src={heroPhone.src} alt="" /> */}
         </div>
     </div>

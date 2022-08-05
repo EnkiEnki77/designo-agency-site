@@ -7,15 +7,15 @@ const ProjectsDirectory = (props: Props) => {
     const categories = [
         {img:{mobile:'../public/assets/home/mobile/image-web-design.jpg', tablet:'../public/assets/home/tablet/image-web-design.jpg', desktop:'../public/assets/home/desktop/image-web-design-large.jpg'}, 
         title:'web design', 
-        path:'/web+design'},
+        path:'/projects/web+design'},
 
         {img:{mobile:'../public/assets/home/mobile/image-graphic-design.jpg', tablet:'../public/assets/home/tablet/image-graphic-design.jpg', desktop:'../public/assets/home/desktop/image-graphic-design.jpg'}, 
         title:'graphic design', 
-        path:'/graphic+design'},
+        path:'/projects/graphic+design'},
 
         {img:{mobile:'../public/assets/home/mobile/image-app-design.jpg', tablet:'../public/assets/home/tablet/image-app-design.jpg', desktop:'../public/assets/home/desktop/image-app-design.jpg'}, 
         title:'app design', 
-        path:'/app+design'},
+        path:'/projects/app+design'},
     ]
 
   return (
