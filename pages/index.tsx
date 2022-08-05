@@ -7,6 +7,7 @@ import FormElement from '../components/FormElement'
 import GetInTouchCont from '../components/GetInTouchCont'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import NavModal from '../components/NavModal'
 import OfferingsCont from '../components/OfferingsCont'
 import ProjectsDirectory from '../components/ProjectsDirectory'
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"></link>
       </Head>
       <Header/>
+      <NavModal/>
       <Hero/>
       <ProjectsDirectory page={null}/>
       <OfferingsCont/>
