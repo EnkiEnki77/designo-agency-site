@@ -9,18 +9,19 @@ type Props = {}
 
 const webDesign = (props: Props) => {
   const projects = [
-    {img: 'image-airfilter.jpg', title: 'AIRFILTER', description: 'Solving the problem of poor indoor air quality by filtering the air'},
-    {img: 'image-eyecam.jpg', title: 'EYECAM', description: 'Product that lets you edit your favorite photos and videos at any time'},
-    {img: 'image-faceit.jpg', title: 'FACEIT', description: 'Get to meet your favorite internet superstar with the faceit app'},
-    {img: 'image-todo.jpg', title: 'TODO', description: 'A todo app that features cloud sync with light and dark mode'},
-    {img: 'image-loopstudios.jpg', title: 'LOOPSTUDIOS', description: 'A VR experience app made for Loopstudios'}
+    {img: 'image-express.jpg', title: 'EXPRESS', description: 'A multi-carrier shipping website for ecommerce businesses'},
+    {img: 'image-transfer.jpg', title: 'TRANSFER', description: 'Site for low-cost money transfers and sending money within seconds'},
+    {img: 'image-photon.jpg', title: 'PHOTON', description: 'A state-of-the-art music player with high-resolution audio and DSP effects'},
+    {img: 'image-builder.jpg', title: 'BUILDER', description: 'Connects users with local contractors based on their location'},
+    {img: 'image-blogr.jpg', title: 'BLOGR', description: 'Blogr is a platform for creating an online blog or publication'},
+    {img: 'image-camp.jpg', title: 'CAMP', description: 'Get expert training in coding, data, design, and digital marketing'}
   ]
 
   
   return (
     <div>
         <Header/>
-        <CategoryInfo page='web design' pageInfo='Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.'/>
+        <CategoryInfo page='web design' pageInfo='We build websites that serve as powerful marketing tools and bring memorable brand experiences.'/>
         <ProjectCont projects={projects}/>
         <ProjectsDirectory page='web design'/>
         <FooterCont/>
