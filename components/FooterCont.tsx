@@ -3,13 +3,15 @@ import Footer from './Footer'
 
 import GetInTouchCont from './GetInTouchCont'
 
-type Props = {}
+type Props = {
+  locations?: true
+}
 
 const FooterCont = (props: Props) => {
   return (
     <div className="relative">
-        <GetInTouchCont/>
-        <Footer/>
+        {!props.locations && <GetInTouchCont/>}
+        <Footer locations={props.locations}/>
     </div>
   )
 }

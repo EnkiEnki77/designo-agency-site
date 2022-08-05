@@ -4,12 +4,14 @@ import Nav from './Nav'
 import Socials from './Socials'
 import Logo from '../public/assets/shared/desktop/logo-light.png'
 
-type Props = {}
+type Props = {
+  locations?: true
+}
 
 const Footer = (props: Props) => {
   return (
-    <div className="pt-[190px]">
-        <div className=" px-6 flex flex-col bg-black gap-8 items-center pt-[254px]">
+    <div className={`${props.locations ? 'pt-0' : 'pt-[190px]'}`}>
+        <div className={`px-6 flex flex-col bg-black gap-8 items-center ${props.locations ? 'pt-16' : 'pt-[254px]'}`}>
             <img className="h-[27px] w-[202px]" src={Logo.src} alt="" />
             <hr className='w-full  h-[0.5px] border-none bg-white/20'/>
             <Nav/>
