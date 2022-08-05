@@ -6,9 +6,9 @@ type Props = {
 
 const FooterInfo = (props: Props) => {
   return (
-    <div>
+    <>
         {props.children}
-    </div>
+    </>
   )
 }
 
