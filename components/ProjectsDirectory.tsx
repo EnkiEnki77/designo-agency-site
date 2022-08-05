@@ -19,7 +19,7 @@ const ProjectsDirectory = (props: Props) => {
     ]
 
   return (
-    <div className='flex flex-col px-6 gap-6 mb-[120px]'>
+    <div className='flex flex-col px-6 gap-6 mb-24'>
         {categories.map((item, i) => <ProjectCategory key={i} img={item.img} title={item.title} path={item.path}/>)}
     </div>
   )

@@ -5,7 +5,7 @@ type Props = {}
 
 const ProjectCont = (props: Props) => {
   return (
-    <div className="px-6 flex flex-col gap-10">
+    <div className="px-6 flex flex-col gap-10 mb-24">
       <Project/>
       <Project/>
       <Project/>
