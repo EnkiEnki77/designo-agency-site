@@ -6,11 +6,13 @@ import pinterest from '../public/assets/shared/desktop/icon-pinterest.svg'
 import instagram from '../public/assets/shared/desktop/icon-instagram.svg'
 import twitter from '../public/assets/shared/desktop/icon-twitter.svg'
 
-type Props = {}
+type Props = {
+    className?: string
+}
 
 const Socials = (props: Props) => {
   return (
-    <div className="flex mb-16 gap-4">
+    <div className={`flex mb-16 md:mb-0  md:self-end gap-4 ${props.className}`}>
         <Link href='#' >
             <img src={facebook.src} alt="" />
         </Link>

@@ -9,7 +9,7 @@ type Props = {
 
 const FooterCont = (props: Props) => {
   return (
-    <div className="relative">
+    <div className="relative md:min-h-[699px]">
         {!props.locations && <GetInTouchCont/>}
         <Footer locations={props.locations}/>
     </div>

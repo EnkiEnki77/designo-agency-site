@@ -10,14 +10,14 @@ type Props = {
 
 const Footer = (props: Props) => {
   return (
-    <div className={`${props.locations ? 'pt-0' : 'pt-[190px]'}`}>
-        <div className={`px-6 flex flex-col bg-black gap-8 items-center ${props.locations ? 'pt-16' : 'pt-[254px]'}`}>
-            <img className="h-[27px] w-[202px]" src={Logo.src} alt="" />
-            <hr className='w-full  h-[0.5px] border-none bg-white/20'/>
-            <Nav/>
-            <FooterInfo><p className="text-center tracking-widest mb-2">Designo Central Office <br/><span className="opacity-60"> 3886 Wellington Street <br/> Toronto, Ontario M9C 3J5</span></p></FooterInfo>
-            <FooterInfo><p className="text-center tracking-widest mb-2">Contact Us (Central Office)<br/><span className="opacity-60"> P : +1 253-863-8967 <br/> M : contact@designo.co</span></p></FooterInfo>
-            <Socials/>
+    <div className={`${props.locations ? 'pt-0' : 'pt-[190px]'} absolute bottom-0 -z-10 `}>
+        <div className={`px-6 md:pb-20 md:gap-y-8 md:justify-between md:px-10 flex flex-col md:flex-row md:flex-wrap bg-black gap-8 items-center ${props.locations ? 'pt-16' : 'pt-[254px] md:pt-[174px]'}`}>
+            <img className="h-[27px] w-[202px] md:order-1" src={Logo.src} alt="" />
+            <hr className='w-full md:basisfull md:order-2  h-[0.5px] border-none bg-white/50'/>
+            <Nav className="md:flex-row md:gap-[42px] md:order-1"/>
+            <FooterInfo className='md:order-3 '><p className="text-center tracking-widest mb-2 md:mb-0 md:text-left">Designo Central Office <br/><span className="opacity-60"> 3886 Wellington Street <br/> Toronto, Ontario M9C 3J5</span></p></FooterInfo>
+            <FooterInfo className='md:order-3 '><p className="text-center tracking-widest mb-2 md:mb-0 md:text-left">Contact Us (Central Office)<br/><span className="opacity-60"> P : +1 253-863-8967 <br/> M : contact@designo.co</span></p></FooterInfo>
+            <Socials className='md:order-3 md:'/>
         </div>
     </div>
   )
