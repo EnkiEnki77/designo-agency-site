@@ -16,7 +16,7 @@ const ProjectCategory = (props: Props) => {
     console.log(props.img.mobile.slice(29))
    
   return (
-    <div className="relative rounded-2xl overflow-hidden w-full h-[250px]  bg-black/50">
+    <div className="relative rounded-2xl overflow-hidden w-full h-[250px] md:h-[200px]  bg-black/50">
         
         <picture>
             <source srcSet={require(`../public/assets/home/desktop/${props.img.desktop.slice(30)}`).default.src } media='(min-width: 1024px)'/>
