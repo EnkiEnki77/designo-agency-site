@@ -22,7 +22,6 @@ const Home: NextPage = () => {
         <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"></link>
       </Head>
       <Header/>
-      <NavModal/>
       <Hero/>
       <ProjectsDirectory page={null}/>
       <OfferingsCont/>
