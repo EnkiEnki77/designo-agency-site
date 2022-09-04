@@ -15,8 +15,8 @@ const Offering = (props: Props) => {
             <img className='absolute -z-10' src={require(`../public/assets/home/desktop/bg-pattern-hero-home.svg`).default.src}/>
             <img className="mb-4" src={require(`../public/assets/home/desktop/${props.img}`).default.src } alt="" />
         </div>
-        <div className='flex flex-col md:gap-4 md:justify-center'>
-          <h3 className='text-black'>{props.title}</h3>
+        <div className='flex flex-col  gap-8 md:gap-4 md:justify-center '>
+          <h3 className='text-black text-center md:text-left '>{props.title}</h3>
           <p className='text-black text-center px-2 md:text-left md:px-0'>{props.description}</p>
         </div>
     </div>

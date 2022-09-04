@@ -10,7 +10,7 @@ const LocationCont = (props: Props) => {
         {img:'image-map-uk.png', country:'united kingdom', office:'Designo UK Office', address:'13 Colorado Way', city:'Rhyd-y-fro SA8 9GA', phone:'078 3115 1400', email:'contact@designo.uk'}
     ]
   return (
-    <div className="flex flex-col gap-10 pt-[90px] mb-[120px]">
+    <div className="flex flex-col gap-10 pt-[96px] md:pt-[155px] mb-[120px] md:gap-[120px]">
         {locationInfo.map(location => <Location img={location.img} country={location.country} office={location.office} address={location.address} city={location.city} phone={location.phone} email={location.email}/>)}
     </div>
   )

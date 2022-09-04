@@ -8,7 +8,7 @@ type Props = {
 
 const ProjectCont = (props: Props) => {
   return (
-    <div className="px-6 flex flex-col gap-10 mb-24">
+    <div className="px-6 flex flex-col gap-10 mb-24 md:px-10">
        {props.projects.map(project => <Project page={props.page} img={project.img} title={project.title} description={project.description}/>)}
     </div>
   )
