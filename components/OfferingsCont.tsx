@@ -10,7 +10,7 @@ const OfferingsCont = (props: Props) => {
         {img:'illustration-friendly.svg', title:'friendly', description:' We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.'},
     ]
   return (
-    <div className="gap-20 md:gap-8 flex flex-col px-6 md:px-10 mb-[120px] md:mb-[80px]">
+    <div className="gap-20 lg:mb-[160px] lg:px-[165px] md:gap-8 flex flex-col px-6 md:px-10 mb-[120px] md:mb-[80px] lg:flex-row">
         {offeringData.map((item, i) => <Offering key={i} img={item.img} title={item.title} description={item.description}/>)}
     </div>
   )

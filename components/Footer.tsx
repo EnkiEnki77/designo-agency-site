@@ -10,8 +10,8 @@ type Props = {
 
 const Footer = (props: Props) => {
   return (
-    <div className={`${props.locations ? 'pt-0' : 'pt-[190px]'} md:absolute md:bottom-0 md:-z-10 `}>
-        <div className={`px-6 md:pb-20 md:gap-y-8 md:justify-between md:px-10 flex flex-col md:flex-row md:flex-wrap bg-black gap-8 items-center ${props.locations ? 'pt-16' : 'pt-[254px] md:pt-[174px]'}`}>
+    <div className={`${props.locations ? 'pt-0' : 'pt-[190px]'} md:absolute md:bottom-0 md:-z-10 w-full`}>
+        <div className={`lg:px-[165px] px-6 md:pb-20 md:gap-y-8 md:justify-between md:px-10 flex flex-col md:flex-row md:flex-wrap bg-black gap-8 items-center ${props.locations ? 'pt-16' : 'pt-[254px] md:pt-[174px]'}`}>
             <img className="h-[27px] w-[202px] md:order-1" src={Logo.src} alt="" />
             <hr className='w-full md:basisfull md:order-2  h-[0.5px] border-none bg-white/50'/>
             <Nav className="md:flex-row md:gap-[42px] md:order-1"/>
