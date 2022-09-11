@@ -10,7 +10,7 @@ type Props = {
 
 const Figure = (props: Props) => {
   return (
-    <figure className={`${!props.figure ? 'pt-[96px] md:pt-[155px] md:mb-[120px] md:px-10' : 'mb-[120px] md:px-10'}`}>
+    <figure className={`${!props.figure ? 'pt-[96px] md:pt-[155px] md:mb-[120px] md:px-10 lg:px-[160px]' : 'mb-[120px] md:px-10 lg:px-[160px]'}`}>
         <picture>
           <source srcSet={require(`../public/assets/about/desktop/${props.img}`).default.src} media="(min-width:1024px)"/>
           <source srcSet={require(`../public/assets/about/tablet/${props.img}`).default.src} media="(min-width:768x)"/>
