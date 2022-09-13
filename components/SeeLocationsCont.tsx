@@ -10,7 +10,7 @@ const SeeLocationsCont = (props: Props) => {
         {img: 'illustration-united-kingdom.svg', country: 'united kingdom', path: 'whore', id: 3}
     ]
   return (
-    <div className="flex flex-col gap-12 mb-[120px]">
+    <div className="flex flex-col lg:flex-row lg:justify-between gap-12 mb-[120px] lg:mb-[160px]">
         {locations.map(location => <SeeLocations key={location.id} img={location.img} country={location.country} path={location.path}/>)}
     </div>
   )
