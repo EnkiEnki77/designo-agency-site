@@ -15,7 +15,7 @@ const SeeLocations = (props: Props) => {
             <img className="mb-4" src={require(`../public/assets/shared/desktop/${props.img}`).default.src } alt="" />
         </div>
         <h3 className='text-black font-bold'>{props.country}</h3>
-        <Button btn='buttonDark'>see location</Button>
+        <Button path={null} btn='buttonDark'>see location</Button>
     </div>  
   )
 }

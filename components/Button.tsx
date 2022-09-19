@@ -4,7 +4,7 @@ import React from 'react'
 type Props = {
     btn: string,
     children: string,
-    path: string
+    path: string | null
 }
 
 const Button = (props: Props) => {

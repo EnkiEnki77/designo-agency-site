@@ -10,10 +10,10 @@ const contact = (props: Props) => {
   return (
     <div>
       <Header/>
-      <div className="md:px-10 md:pt-[155px]">
+      <div className="md:px-10 md:pt-[155px] lg:px-[160px]">
         <ContactForm/>
+        <SeeLocationsCont/>
       </div>
-      <SeeLocationsCont/>
       <FooterCont locations={true}/>
     </div>
   )
