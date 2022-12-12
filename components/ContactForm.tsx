@@ -8,10 +8,13 @@ const ContactForm = (props: Props) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const [textArea, setTextArea] = useState<string>("");
 
   const handleInputs = (
     input: string,
-    e: React.ChangeEvent<HTMLInputElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     const { value } = e.target;
 
@@ -19,7 +22,9 @@ const ContactForm = (props: Props) => {
       ? setName(value)
       : input === "Email Address"
       ? setEmail(value)
-      : setPhone(value);
+      : input === "Phone"
+      ? setPhone(value)
+      : setTextArea(value);
   };
 
   console.log(name);
@@ -35,6 +40,7 @@ const ContactForm = (props: Props) => {
     setName("");
     setEmail("");
     setPhone("");
+    setTextArea("");
 
     alert(
       "Email submitted, we will get back to you shortly. Thanks for contacting us."
@@ -72,6 +78,9 @@ const ContactForm = (props: Props) => {
           className="mb-4 border-b border-white text-white active:border-b-[3px] outlne-none bg-peach w-full h-[90px] px-4 pb-3 placeholder:text-white/50"
           name=""
           id=""
+          required
+          onChange={(e) => handleInputs("text area", e)}
+          value={textArea}
         ></textarea>
         <Button notLink={true} path="" btn="buttonLight">
           Submit
