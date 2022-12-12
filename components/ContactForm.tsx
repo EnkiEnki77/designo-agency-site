@@ -11,7 +11,7 @@ const ContactForm = (props: Props) => {
         {type:'text', placeholder:'Phone'}
     ]
   return (
-    <div className="px-6 md:px-[60px] lg:px-[95px] lg:gap-20 lg:flex lg:items-center md:pt-[70px] md:rounded-2xl overflow-hidden bg-bgPattern4 bg-peach bg-[top_6rem_left_-5rem]  pb-[72px] mb-[120px]">
+    <div className="px-6 md:px-[60px] pt-[172px] lg:px-[95px] lg:gap-20 lg:flex lg:items-center md:pt-[70px] md:rounded-2xl overflow-hidden bg-bgPattern4 bg-peach bg-[top_6rem_left_-5rem]  pb-[72px] mb-[120px]">
         <div className="lg:w-1/2">
           <h1 className="text-center capitalize mb-6 md:text-left">contact us</h1>
           <p className="text-center mb-12 md:text-left">Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow. If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>

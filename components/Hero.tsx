@@ -14,7 +14,7 @@ const Hero = (props: Props) => {
               <p className="lg:pr-[520px] text-center px-2 lg:text-left mb-6 lg:mb-10 md:px-[105px] lg:px-0">With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</p>
               <Button path='/about' btn='buttonLight'>learn more</Button>
           </div>
-          <div className='lg:h-full bottom-0 right-[260px] bg-transparent rounded-lg bg-heroPhone h-[450px] lg:absolute bg-no-repeat w-full lg:w-[300px] bg-[center_top_5rem] z-20'>
+          <div className='lg:h-full bottom-0 right-[260px] bg-transparent rounded-lg bg-heroPhone h-[450px] lg:absolute bg-no-repeat w-full lg:w-[300px] bg-[center_top_-6rem] md:bg-[center_top_5rem] z-20'>
               {/* <img src={heroPhone.src} alt="" /> */}
           </div>
       </div>

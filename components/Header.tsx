@@ -22,8 +22,8 @@ const Header = (props: Props) => {
  
   return (
     <div className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center justify-between px-6 md:px-10 fixed z-40">
-        <Link href='/'><img className="h-[27px] w-[202px]" src={Logo.src} alt="" /></Link>
-        {width < 768 && <img src={Hamburger.src} alt="" />}
+        <Link href='/'><img className="h-[27px] w-[202px] hover:cursor-pointer" src={Logo.src} alt="" /></Link>
+        {width < 768 && <img className="hover:cursor-pointer" src={Hamburger.src} alt="" />}
         {width >= 768  && <Nav header={true}/>}
     </div>
   )
