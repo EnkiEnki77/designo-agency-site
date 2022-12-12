@@ -1,16 +1,33 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 type Props = {
-    btn: string,
-    children: string,
-    path: string | null
-}
+  btn: string;
+  children: string;
+  path: string | null;
+  submit?: boolean;
+  notLink: boolean;
+};
 
 const Button = (props: Props) => {
   return (
-    <Link href={`${props.path}`}><button className={`${props.btn} font-bold mx-auto lg:mx-0`}>{props.children}</button></Link>
-  )
-}
+    <>
+      {props.notLink ? (
+        <button
+          type={props.submit ? "submit" : "button"}
+          className={`${props.btn} font-bold mx-auto lg:mx-0`}
+        >
+          {props.children}
+        </button>
+      ) : (
+        <Link href={`${props.path}`}>
+          <button className={`${props.btn} font-bold mx-auto lg:mx-0`}>
+            {props.children}
+          </button>
+        </Link>
+      )}
+    </>
+  );
+};
 
-export default Button
+export default Button;

@@ -12,6 +12,7 @@ const FormElement = (props: Props) => {
         className="text-white active:border-b-[3px] outlne-none bg-transparent w-full h-full px-4 pb-3 placeholder:text-white/50"
         type={props.type}
         placeholder={props.placeholder}
+        required
       />
     </div>
   );

@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about our services.
           </p>
-          <Button path="/about" btn="buttonLight">
+          <Button notLink={false} path="/about" btn="buttonLight">
             learn more
           </Button>
         </div>
