@@ -5,6 +5,7 @@ import Logo from "../public/assets/shared/desktop/logo-dark.png";
 import Hamburger from "../public/assets/shared/mobile/icon-hamburger.svg";
 import Nav from "./Nav";
 import NavModal from "./NavModal";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {};
 
@@ -30,7 +31,12 @@ const Header = (props: Props) => {
   console.log(isLocked);
 
   return (
-    <div className="fixed top-0 z-30 w-full">
+    <motion.div
+      initial={{ y: -500 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 z-30 w-full"
+    >
       <div className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center  justify-between px-6 md:px-10 fixed z-40">
         <Link href="/#">
           <img
@@ -49,14 +55,21 @@ const Header = (props: Props) => {
         )}
         {width >= 768 && <Nav header={true} />}
       </div>
-      {toggle && [
-        <NavModal key={"nav modal"} />,
-        <div
-          key="overlay fixed"
-          className="absolute h-screen w-full bg-black/50 z-20"
-        ></div>,
-      ]}
-    </div>
+      <AnimatePresence>
+        {toggle && [
+          <NavModal key="nav modal" />,
+          <motion.div
+            initial={{ opacity: 0, y: -300 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -300 }}
+            transition={{ duration: 0.5 }}
+            key="overlay"
+            className="absolute h-screen w-full bg-black/50 z-20"
+          ></motion.div>,
+        ]}
+      </AnimatePresence>
+      ,
+    </motion.div>
   );
 };
 

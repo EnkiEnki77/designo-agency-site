@@ -15,6 +15,7 @@ const ProjectsDirectory = (props: Props) => {
       },
       title: "web design",
       path: "/projects/web+design/#",
+      initialX: 300,
     },
 
     {
@@ -25,6 +26,7 @@ const ProjectsDirectory = (props: Props) => {
       },
       title: "graphic design",
       path: "/projects/graphic+design/#",
+      initialX: -300,
     },
 
     {
@@ -35,6 +37,7 @@ const ProjectsDirectory = (props: Props) => {
       },
       title: "app design",
       path: "/projects/app+design/#",
+      initialX: 300,
     },
   ];
 
@@ -55,6 +58,7 @@ const ProjectsDirectory = (props: Props) => {
       {props.page === null
         ? categories.map((item, i) => (
             <ProjectCategory
+              initialX={item.initialX}
               key={i}
               img={item.img}
               title={item.title}
@@ -66,6 +70,7 @@ const ProjectsDirectory = (props: Props) => {
           ))
         : categoriesFiltered.map((item, i) => (
             <ProjectCategory
+              initialX={item.initialX}
               className={"lg:h-full"}
               key={i}
               img={item.img}

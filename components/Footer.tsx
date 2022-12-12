@@ -3,6 +3,7 @@ import FooterInfo from "./FooterInfo";
 import Nav from "./Nav";
 import Socials from "./Socials";
 import Logo from "../public/assets/shared/desktop/logo-light.png";
+import { motion } from "framer-motion";
 
 type Props = {
   locations?: true;
@@ -10,7 +11,7 @@ type Props = {
 
 const Footer = (props: Props) => {
   return (
-    <div
+    <motion.div
       className={`${
         props.locations ? "pt-0" : "pt-[190px] md:pt-[270px] lg:pt-[210px]"
       }  md:-z-10 w-full`}
@@ -44,7 +45,7 @@ const Footer = (props: Props) => {
         </FooterInfo>
         <Socials className="md:order-3 md:" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

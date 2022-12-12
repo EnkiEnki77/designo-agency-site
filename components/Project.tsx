@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   img: string;
@@ -9,7 +10,7 @@ type Props = {
 
 const Project = (props: Props) => {
   return (
-    <figure className="h-[478px] md:h-[310px] rounded-[15px] overflow-hidden md:flex lg:w-full lg:h-full lg:flex-col">
+    <motion.figure className="h-[478px] md:h-[310px] rounded-[15px] overflow-hidden md:flex lg:w-full lg:h-full lg:flex-col">
       <img
         className=" md:w-1/2 lg:w-full w-full h-full min-h-[310px] max-h-[320px] md:h-full lg:h-4/5"
         src={
@@ -22,7 +23,7 @@ const Project = (props: Props) => {
         <h3 className="uppercase text-peach text-center">{props.title}</h3>
         <p className="text-black text-center">{props.description}</p>
       </figcaption>
-    </figure>
+    </motion.figure>
   );
 };
 
