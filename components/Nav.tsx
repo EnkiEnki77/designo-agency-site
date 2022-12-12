@@ -13,7 +13,7 @@ const Nav = (props: Props) => {
         props.header && "md:flex-row md:gap-[42px]"
       } ${props.className}`}
     >
-      <Link href="/about">
+      <Link href="/about/#">
         <p
           className={`text-center uppercase tracking-widest hover:cursor-pointer hover:text-peach ${
             props.header && "text-black"
@@ -22,7 +22,7 @@ const Nav = (props: Props) => {
           our company
         </p>
       </Link>
-      <Link href="/locations">
+      <Link href="/locations/#">
         <p
           className={`text-center uppercase tracking-widest hover:cursor-pointer hover:text-peach ${
             props.header && "text-black"
@@ -31,7 +31,7 @@ const Nav = (props: Props) => {
           locations
         </p>
       </Link>
-      <Link href="/contact">
+      <Link href="/contact/#">
         <p
           className={`text-center uppercase tracking-widest hover:cursor-pointer hover:text-peach ${
             props.header && "text-black"

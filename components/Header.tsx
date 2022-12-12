@@ -32,7 +32,7 @@ const Header = (props: Props) => {
   return (
     <div className="fixed top-0 z-30 w-full">
       <div className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center  justify-between px-6 md:px-10 fixed z-40">
-        <Link href="/">
+        <Link href="/#">
           <img
             className="h-[27px] w-[202px] hover:cursor-pointer"
             src={Logo.src}
