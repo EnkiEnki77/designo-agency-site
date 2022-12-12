@@ -5,9 +5,6 @@ import Logo from "../public/assets/shared/desktop/logo-dark.png";
 import Hamburger from "../public/assets/shared/mobile/icon-hamburger.svg";
 import Nav from "./Nav";
 import NavModal from "./NavModal";
-const bodyScrollLock = require("body-scroll-lock");
-const disableBodyScroll = bodyScrollLock.disableBodyScroll;
-const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
 type Props = {};
 
@@ -33,7 +30,7 @@ const Header = (props: Props) => {
   console.log(isLocked);
 
   return (
-    <div className="absolute top-0 z-30 w-full">
+    <div className="fixed top-0 z-30 w-full">
       <div className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center  justify-between px-6 md:px-10 fixed z-40">
         <Link href="/">
           <img
@@ -55,7 +52,7 @@ const Header = (props: Props) => {
       {toggle && [
         <NavModal key={"nav modal"} />,
         <div
-          key="overlay"
+          key="overlay fixed"
           className="absolute h-screen w-full bg-black/50 z-20"
         ></div>,
       ]}
