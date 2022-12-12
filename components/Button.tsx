@@ -5,7 +5,6 @@ type Props = {
   btn: string;
   children: string;
   path: string | null;
-  submit?: boolean;
   notLink: boolean;
 };
 
@@ -14,7 +13,7 @@ const Button = (props: Props) => {
     <>
       {props.notLink ? (
         <button
-          type={props.submit ? "submit" : "button"}
+          type="submit"
           className={`${props.btn} font-bold mx-auto lg:mx-0`}
         >
           {props.children}

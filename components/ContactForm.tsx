@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import FormElement from "../components/FormElement";
 import Button from "./Button";
 
 type Props = {};
 
 const ContactForm = (props: Props) => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+
+  const handleInputs = (
+    input: string,
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const { value } = e.target;
+
+    input === "Name"
+      ? setName(value)
+      : input === "Email Address"
+      ? setEmail(value)
+      : setPhone(value);
+  };
+
+  console.log(name);
   const inputs = [
     { type: "text", placeholder: "Name" },
     { type: "email", placeholder: "Email Address" },
@@ -13,7 +31,11 @@ const ContactForm = (props: Props) => {
 
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("hello");
+
+    setName("");
+    setEmail("");
+    setPhone("");
+
     alert(
       "Email submitted, we will get back to you shortly. Thanks for contacting us."
     );
@@ -36,7 +58,14 @@ const ContactForm = (props: Props) => {
         action=""
       >
         {inputs.map((input) => (
-          <FormElement type={input.type} placeholder={input.placeholder} />
+          <FormElement
+            handleInputs={handleInputs}
+            name={name}
+            email={email}
+            phone={phone}
+            type={input.type}
+            placeholder={input.placeholder}
+          />
         ))}
         <textarea
           placeholder="Your Message"
@@ -44,7 +73,7 @@ const ContactForm = (props: Props) => {
           name=""
           id=""
         ></textarea>
-        <Button submit={true} notLink={true} path="" btn="buttonLight">
+        <Button notLink={true} path="" btn="buttonLight">
           Submit
         </Button>
       </form>
