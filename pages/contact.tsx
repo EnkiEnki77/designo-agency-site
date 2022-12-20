@@ -19,7 +19,7 @@ const contact = (props: Props) => {
   }, [yPosition]);
   return (
     <Layout>
-      <div>
+      <div className="overflow-hidden">
         <Header toggle={toggle} setToggle={setToggle} />
         <div className="md:px-10 md:pt-[155px] lg:px-[160px]">
           <ContactForm />

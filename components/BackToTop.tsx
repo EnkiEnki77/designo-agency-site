@@ -32,7 +32,9 @@ const BackToTop = ({ yPosition, toggle }: Props) => {
       transition={{ y: { yoyo: Infinity }, duration: 0.5 }}
       onClick={handleScrollToTop}
       className={` ${
-        yPosition < 400 && "pointer-events-none"
+        yPosition < 400
+          ? "pointer-events-none"
+          : yPosition > 400 && toggle && "pointer-events-none"
       } w-10 h-10 rounded-full bg-peach hover:bg-lightPeach fixed top-[575px] md:top-[650px] md:right-[60px] right-[20px] z-50 flex flex-col 
       items-center justify-center cursor-pointer  shadow-[0_4px_10px_1px]  shadow-black `}
     >
