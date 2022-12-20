@@ -63,14 +63,12 @@ const Header = (props: Props) => {
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: 1, scale: 1.3 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
+              className="w-6 h-6 cursor-pointer"
             >
-              <XMarkIcon
-                onClick={handleToggle}
-                className="w-6 h-6 cursor-pointer"
-              />
+              <XMarkIcon onClick={handleToggle} className="w-full h-full" />
             </motion.div>
           </AnimatePresence>
         )}

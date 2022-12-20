@@ -45,7 +45,7 @@ const Hero = (props: Props) => {
             learn more
           </Button>
         </div>
-        <div className="lg:h-full bottom-0 right-[260px] bg-transparent rounded-lg bg-heroPhone h-[450px] lg:absolute bg-no-repeat w-full lg:w-[300px] bg-[center_top_-6rem] md:bg-[center_top_-6rem] lg:bg-[center_top_7rem] z-20">
+        <div className="lg:h-full bottom-0 right-[260px]  rounded-lg bg-heroPhone h-[450px] lg:absolute bg-no-repeat w-full lg:w-[300px] bg-[center_top_-6rem] md:bg-[center_top_-6rem] lg:bg-[center_top_7rem] z-20">
           {/* <img src={heroPhone.src} alt="" /> */}
         </div>
       </div>
