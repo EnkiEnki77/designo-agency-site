@@ -12,6 +12,7 @@ import OfferingsCont from "../components/OfferingsCont";
 import ProjectsDirectory from "../components/ProjectsDirectory";
 import BackToTop from "../components/BackToTop";
 import { useEffect, useState } from "react";
+import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   const [yPosition, setYPosition] = useState(0);
@@ -23,28 +24,30 @@ const Home: NextPage = () => {
   }, [yPosition]);
 
   return (
-    <div className="relative">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
-          rel="stylesheet"
-        ></link>
-      </Head>
-      <Header />
-      <Hero />
-      <ProjectsDirectory page={null} />
-      <OfferingsCont />
-      <FooterCont />
-      <BackToTop yPosition={yPosition} />
-    </div>
+    <Layout>
+      <div className="relative">
+        <Head>
+          <title>Create Next App</title>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap"
+            rel="stylesheet"
+          ></link>
+        </Head>
+        <Header />
+        <Hero />
+        <ProjectsDirectory page={null} />
+        <OfferingsCont />
+        <FooterCont />
+        <BackToTop yPosition={yPosition} />
+      </div>
+    </Layout>
   );
 };
 

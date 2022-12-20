@@ -25,7 +25,7 @@ const ProjectCategory = (props: Props) => {
         x: 0,
         transition: { duration: 1, delay: 0.2 },
       }}
-      className={`relative rounded-2xl cursor-pointer hover:bg-peach/80 overflow-hidden w-full h-[250px] md:h-[200px]   ${props.className}`}
+      className={`relative rounded-2xl cursor-pointer group  overflow-hidden w-full h-[250px] md:h-[200px]   ${props.className}`}
     >
       <picture className="">
         <source
@@ -45,7 +45,7 @@ const ProjectCategory = (props: Props) => {
           media="(min-width: 768px)"
         />
         <img
-          className="absolute w-full h-full hover:bg-peach cursor-pointer -z-20 rounded-lg "
+          className="absolute w-full h-full cursor-pointer -z-20 rounded-lg "
           src={
             require(`../public/assets/home/mobile/${props.img.mobile.slice(
               29
@@ -64,7 +64,7 @@ const ProjectCategory = (props: Props) => {
           </div>
         </Link>
       </div>
-      <div className="w-full h-full bg-black/50 absolute z-10 top-0"></div>
+      <div className="w-full h-full bg-black/50 group-hover:bg-peach/60 absolute z-10 top-0"></div>
     </motion.div>
   );
 };

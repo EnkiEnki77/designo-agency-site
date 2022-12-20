@@ -32,12 +32,7 @@ const Header = (props: Props) => {
   console.log(isLocked);
 
   return (
-    <motion.div
-      initial={{ y: -500 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 z-30 w-full"
-    >
+    <motion.div className="fixed top-0 z-30 w-full">
       <header className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center  justify-between px-6 md:px-10 fixed z-40">
         <Link href="/#">
           <img
@@ -59,7 +54,7 @@ const Header = (props: Props) => {
               alt=""
             />
           </AnimatePresence>
-        ) : (
+        ) : width < 768 ? (
           <AnimatePresence>
             <motion.div
               initial={{ opacity: 0 }}
@@ -71,7 +66,7 @@ const Header = (props: Props) => {
               <XMarkIcon onClick={handleToggle} className="w-full h-full" />
             </motion.div>
           </AnimatePresence>
-        )}
+        ) : null}
         {width >= 768 && <Nav header={true} />}
       </header>
       <AnimatePresence>

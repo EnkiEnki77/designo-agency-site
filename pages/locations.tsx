@@ -1,18 +1,21 @@
-import React from 'react'
-import FooterCont from '../components/FooterCont'
-import Header from '../components/Header'
-import LocationCont from '../components/LocationCont'
+import React from "react";
+import FooterCont from "../components/FooterCont";
+import Header from "../components/Header";
+import LocationCont from "../components/LocationCont";
+import Layout from "../components/Layout";
 
-type Props = {}
+type Props = {};
 
 const locations = (props: Props) => {
   return (
-    <div>
-      <Header/>
-      <LocationCont/>
-      <FooterCont />
-    </div>
-  )
-}
+    <Layout>
+      <div>
+        <Header />
+        <LocationCont />
+        <FooterCont />
+      </div>
+    </Layout>
+  );
+};
 
-export default locations
+export default locations;

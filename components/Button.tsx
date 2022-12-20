@@ -17,9 +17,9 @@ const Button = (props: Props) => {
     <>
       {props.notLink ? (
         <motion.button
-          initial={props.initial}
-          animate={props.animate}
-          transition={props.transition}
+          // initial={props.initial}
+          // animate={props.animate}
+          // transition={props.transition}
           type="submit"
           className={`${props.btn} font-bold mx-auto lg:mx-0`}
         >
@@ -28,9 +28,9 @@ const Button = (props: Props) => {
       ) : (
         <Link href={`${props.path}`}>
           <motion.button
-            initial={props.initial}
-            animate={props.animate}
-            transition={props.transition}
+            // initial={props.initial}
+            // animate={props.animate}
+            // transition={props.transition}
             className={`${props.btn} font-bold mx-auto lg:mx-0`}
           >
             {props.children}
