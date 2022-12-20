@@ -9,6 +9,7 @@ type Props = {};
 
 const locations = (props: Props) => {
   const [yPosition, setYPosition] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setYPosition(window.scrollY);
@@ -18,10 +19,10 @@ const locations = (props: Props) => {
   return (
     <Layout>
       <div>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <LocationCont />
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

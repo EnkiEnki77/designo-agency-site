@@ -44,6 +44,7 @@ const appDesign = (props: Props) => {
 
   const [yPosition, setYPosition] = useState(0);
   const [width, setWidth] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -66,7 +67,7 @@ const appDesign = (props: Props) => {
   return (
     <Layout>
       <div>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <CategoryInfo
           page="app design"
           pageInfo="Our mobile designs bring intuitive digital solutions to your customers right at their fingertips."
@@ -74,7 +75,7 @@ const appDesign = (props: Props) => {
         <ProjectCont page="app-design" projects={projects} />
         <ProjectsDirectory width={width} page="app design" />
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

@@ -11,6 +11,7 @@ type Props = {};
 
 const about = (props: Props) => {
   const [yPosition, setYPosition] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setYPosition(window.scrollY);
@@ -20,7 +21,7 @@ const about = (props: Props) => {
   return (
     <Layout>
       <div className="overflow-hidden">
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <div className="w-full lg:px-[160px] ">
           <Figure
             figure={false}
@@ -48,7 +49,7 @@ const about = (props: Props) => {
           />
         </div>
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

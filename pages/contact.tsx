@@ -10,6 +10,7 @@ type Props = {};
 
 const contact = (props: Props) => {
   const [yPosition, setYPosition] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setYPosition(window.scrollY);
@@ -19,13 +20,13 @@ const contact = (props: Props) => {
   return (
     <Layout>
       <div>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <div className="md:px-10 md:pt-[155px] lg:px-[160px]">
           <ContactForm />
           <SeeLocationsCont />
         </div>
         <FooterCont locations={true} />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

@@ -50,6 +50,7 @@ const webDesign = (props: Props) => {
 
   const [yPosition, setYPosition] = useState(0);
   const [width, setWidth] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -72,7 +73,7 @@ const webDesign = (props: Props) => {
   return (
     <Layout>
       <div>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <CategoryInfo
           page="web design"
           pageInfo="We build websites that serve as powerful marketing tools and bring memorable brand experiences."
@@ -80,7 +81,7 @@ const webDesign = (props: Props) => {
         <ProjectCont page="web-design" projects={projects} />
         <ProjectsDirectory width={width} page="web design" />
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

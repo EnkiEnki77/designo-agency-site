@@ -6,6 +6,7 @@ type Props = {
   title: string;
   description: string;
   even: boolean;
+  width: number;
 };
 
 const Offering = (props: Props) => {
@@ -23,13 +24,15 @@ const Offering = (props: Props) => {
   // viewport={{ once: true }}
 
   const item = {
-    hidden: { opacity: 0, y: 300 },
-    show: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 100 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
   return (
     <motion.div
       viewport={{ once: true }}
       variants={item}
+      initial={props.width < 1024 ? "hidden" : undefined}
+      whileInView={props.width < 1024 ? "show" : undefined}
       className="flex flex-col md:flex-row lg:flex-col  items-center gap-8 "
     >
       <div className="min-w-[202px] min-h-[202px] h-auto relative">

@@ -18,28 +18,35 @@ const ProjectCategory = (props: Props) => {
   console.log(props.className);
 
   console.log(props.width);
+
+  const item = {
+    hidden: {
+      opacity: 0,
+      x:
+        props.width >= 1024 && props.title !== "web design"
+          ? 100
+          : props.width < 1024
+          ? -100
+          : 0,
+      y: props.width >= 1024 && props.title === "web design" ? 100 : 0,
+    },
+
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
   return (
     <>
       {props.width !== 0 ? (
         <motion.div
+          variants={item}
+          initial={props.width < 1024 ? "hidden" : undefined}
+          whileInView={props.width < 1024 ? "show" : undefined}
           whileHover={{ scale: 1.04 }}
           whileTap={{ scale: 0.98 }}
-          initial={{
-            opacity: 0,
-            x:
-              props.width >= 1024 && props.title !== "web design"
-                ? 300
-                : props.width < 1024
-                ? -300
-                : -300,
-            // y: props.width >= 1024 && props.title === "web design" ? 300 : 0,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: { duration: 1, delay: 0.3 },
-          }}
           viewport={{ once: true }}
           className={`relative rounded-2xl cursor-pointer group  overflow-hidden w-full h-[250px] md:h-[200px]   ${props.className}`}
         >

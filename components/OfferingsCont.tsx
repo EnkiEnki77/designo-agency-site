@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Offering from "./Offering";
 import { motion } from "framer-motion";
 
@@ -35,48 +35,46 @@ const OfferingsCont = (props: Props) => {
       opacity: 1,
       transition: {
         delayChildren: 0.5,
-        staggerChildren: 0.2,
+        staggerChildren: 0.4,
       },
     },
   };
 
-  return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true }}
-      className="gap-20 lg:mb-[160px] lg:px-[165px] md:gap-8 flex flex-col px-6 md:px-10 mb-[120px] md:mb-[80px] lg:flex-row"
-    >
-      {/* {offeringData.map((item, i) => (
-        <Offering
-          key={i}
-          even={item.even}
-          img={item.img}
-          title={item.title}
-          description={item.description}
-        />
-      ))} */}
+  const [width, setWidth] = useState(0);
 
-      <Offering
-        even={offeringData[0].even}
-        img={offeringData[0].img}
-        title={offeringData[0].title}
-        description={offeringData[0].description}
-      />
-      <Offering
-        even={offeringData[0].even}
-        img={offeringData[0].img}
-        title={offeringData[0].title}
-        description={offeringData[0].description}
-      />
-      <Offering
-        even={offeringData[0].even}
-        img={offeringData[0].img}
-        title={offeringData[0].title}
-        description={offeringData[0].description}
-      />
-    </motion.div>
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    const handleResize = () => setWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <>
+      {width !== 0 && (
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="gap-20 lg:mb-[160px] lg:px-[165px] md:gap-8 flex flex-col px-6 md:px-10 mb-[120px] md:mb-[80px] lg:flex-row"
+        >
+          {offeringData.map((item, i) => (
+            <Offering
+              width={width}
+              key={i}
+              even={item.even}
+              img={item.img}
+              title={item.title}
+              description={item.description}
+            />
+          ))}
+        </motion.div>
+      )}
+    </>
   );
 };
 

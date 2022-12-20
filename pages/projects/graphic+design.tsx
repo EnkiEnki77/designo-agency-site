@@ -32,6 +32,7 @@ const graphicDesign = (props: Props) => {
 
   const [yPosition, setYPosition] = useState(0);
   const [width, setWidth] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -54,7 +55,7 @@ const graphicDesign = (props: Props) => {
   return (
     <Layout>
       <div>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <CategoryInfo
           page="graphic design"
           pageInfo="We deliver eye-catching branding materials that are tailored to meet your business objectives."
@@ -62,7 +63,7 @@ const graphicDesign = (props: Props) => {
         <ProjectCont page="graphic-design" projects={projects} />
         <ProjectsDirectory width={width} page="graphic design" />
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

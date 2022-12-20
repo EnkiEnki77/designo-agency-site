@@ -17,6 +17,7 @@ import Layout from "../components/Layout";
 const Home: NextPage = () => {
   const [yPosition, setYPosition] = useState(0);
   const [width, setWidth] = useState(0);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -55,12 +56,12 @@ const Home: NextPage = () => {
             rel="stylesheet"
           ></link>
         </Head>
-        <Header />
+        <Header toggle={toggle} setToggle={setToggle} />
         <Hero />
         <ProjectsDirectory width={width} page={null} />
         <OfferingsCont />
         <FooterCont />
-        <BackToTop yPosition={yPosition} />
+        <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>
     </Layout>
   );

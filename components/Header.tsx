@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
 import useBodyScrollLock from "../hooks/useBodyScrollLock";
 import Logo from "../public/assets/shared/desktop/logo-dark.png";
 import Hamburger from "../public/assets/shared/mobile/icon-hamburger.svg";
@@ -8,15 +8,18 @@ import NavModal from "./NavModal";
 import { AnimatePresence, motion } from "framer-motion";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 
-type Props = {};
+type Props = {
+  toggle: boolean;
+  setToggle: Dispatch<SetStateAction<boolean>>;
+};
 
 const Header = (props: Props) => {
   const [width, setWidth] = useState(0);
-  const [toggle, setToggle] = useState<boolean>(false);
+
   const { isLocked, toggleLock } = useBodyScrollLock();
 
   const handleToggle = () => {
-    setToggle((prev) => !prev);
+    props.setToggle((prev) => !prev);
     toggleLock();
   };
 
@@ -41,7 +44,7 @@ const Header = (props: Props) => {
             alt=""
           />
         </Link>
-        {width < 768 && !toggle ? (
+        {width < 768 && !props.toggle ? (
           <AnimatePresence>
             <motion.img
               initial={{ opacity: 0 }}
@@ -70,7 +73,7 @@ const Header = (props: Props) => {
         {width >= 768 && <Nav header={true} />}
       </header>
       <AnimatePresence>
-        {toggle && [
+        {props.toggle && [
           <NavModal key="nav modal" />,
           <motion.div
             initial={{ opacity: 0, y: -300 }}

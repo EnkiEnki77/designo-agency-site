@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 type Props = {
   yPosition: number;
+  toggle: boolean;
 };
 
-const BackToTop = ({ yPosition }: Props) => {
+const BackToTop = ({ yPosition, toggle }: Props) => {
   const [scroll, setScroll] = useState(false);
 
   const handleScrollToTop = () => {
@@ -25,7 +26,7 @@ const BackToTop = ({ yPosition }: Props) => {
     <motion.div
       initial={{ opacity: 0, y: 0 }}
       animate={{
-        opacity: yPosition > 400 ? 1 : 0,
+        opacity: yPosition > 400 && !toggle ? 1 : 0,
         y: [3, -4],
       }}
       transition={{ y: { yoyo: Infinity }, duration: 0.5 }}
