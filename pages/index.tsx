@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <Head>
           <title>Create Next App</title>
           <link rel="icon" href="/favicon.ico" />

@@ -5,6 +5,7 @@ type Props = {
   img: string;
   title: string;
   description: string;
+  even: boolean;
 };
 
 const Offering = (props: Props) => {
@@ -12,8 +13,12 @@ const Offering = (props: Props) => {
   console.log(path);
   return (
     <motion.div
-      initial={{ y: 300, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+      initial={{ x: props.even ? -300 : 300, opacity: 0 }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, delay: 0.3 },
+      }}
       viewport={{ once: true }}
       className="flex flex-col md:flex-row lg:flex-col  items-center gap-8 "
     >

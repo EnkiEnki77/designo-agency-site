@@ -23,7 +23,7 @@ const ProjectCategory = (props: Props) => {
       whileInView={{
         opacity: 1,
         x: 0,
-        transition: { duration: 1, delay: 0.2 },
+        transition: { duration: 1, delay: 0.3 },
       }}
       viewport={{ once: true }}
       className={`relative rounded-2xl cursor-pointer group  overflow-hidden w-full h-[250px] md:h-[200px]   ${props.className}`}
