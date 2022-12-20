@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   img: string;
@@ -11,7 +12,10 @@ type Props = {
 
 const Figure = (props: Props) => {
   return (
-    <figure
+    <motion.figure
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 1 } }}
+      viewport={{ once: true }}
       className={`lg:flex lg:rounded-2xl  group lg:[&:nth-of-type(odd)]:flex-row-reverse  lg:overflow-hidden ${
         !props.figure
           ? "pt-[96px]  md:pt-[155px] md:mb-[120px] lg:mb-[160px] md:px-10 lg:px-0"
@@ -72,7 +76,7 @@ const Figure = (props: Props) => {
               </p>,
             ]}
       </figcaption>
-    </figure>
+    </motion.figure>
   );
 };
 

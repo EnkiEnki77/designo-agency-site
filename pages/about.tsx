@@ -19,7 +19,7 @@ const about = (props: Props) => {
   }, [yPosition]);
   return (
     <Layout>
-      <div>
+      <div className="overflow-hidden">
         <Header />
         <div className="w-full lg:px-[160px] ">
           <Figure

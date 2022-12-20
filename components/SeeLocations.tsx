@@ -1,15 +1,26 @@
 import React from "react";
 import Button from "./Button";
+import { motion } from "framer-motion";
 
 type Props = {
   img: string;
   country: string;
   path: string;
+  even: boolean;
 };
 
 const SeeLocations = (props: Props) => {
   return (
-    <div className="flex flex-col items-center gap-8 ">
+    <motion.div
+      initial={{ x: props.even ? -300 : 300, opacity: 0 }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, delay: 0.3 },
+      }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center gap-8 "
+    >
       <div className="max-w-[202px] w-full h-auto relative">
         <img
           className="absolute -z-10 w-full "
@@ -40,7 +51,7 @@ const SeeLocations = (props: Props) => {
       >
         see location
       </Button>
-    </div>
+    </motion.div>
   );
 };
 
