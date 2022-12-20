@@ -16,11 +16,26 @@ import Layout from "../components/Layout";
 
 const Home: NextPage = () => {
   const [yPosition, setYPosition] = useState(0);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    const handleWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWidth);
+
+    return () => window.removeEventListener("resize", handleWidth);
+  }, []);
 
   useEffect(() => {
     setYPosition(window.scrollY);
     const handleY = () => setYPosition(window.scrollY);
     window.addEventListener("scroll", handleY);
+
+    return () => window.removeEventListener("scroll", handleY);
   }, [yPosition]);
 
   return (
@@ -42,7 +57,7 @@ const Home: NextPage = () => {
         </Head>
         <Header />
         <Hero />
-        <ProjectsDirectory page={null} />
+        <ProjectsDirectory width={width} page={null} />
         <OfferingsCont />
         <FooterCont />
         <BackToTop yPosition={yPosition} />

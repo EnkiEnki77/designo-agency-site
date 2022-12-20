@@ -11,15 +11,25 @@ type Props = {
 const Offering = (props: Props) => {
   const path = `../public/assets/home/desktop/${props.img}`;
   console.log(path);
+  // x: props.even ? -300 : 300,
+
+  // initial={{ opacity: 0, y: 100 }}
+  // whileInView={{
+  //   x: 0,
+  //   y: 0,
+  //   opacity: 1,
+  //   transition: { duration: 1, delay: 0.3 },
+  // }}
+  // viewport={{ once: true }}
+
+  const item = {
+    hidden: { opacity: 0, y: 300 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
     <motion.div
-      initial={{ x: props.even ? -300 : 300, opacity: 0 }}
-      whileInView={{
-        x: 0,
-        opacity: 1,
-        transition: { duration: 1, delay: 0.3 },
-      }}
       viewport={{ once: true }}
+      variants={item}
       className="flex flex-col md:flex-row lg:flex-col  items-center gap-8 "
     >
       <div className="min-w-[202px] min-h-[202px] h-auto relative">

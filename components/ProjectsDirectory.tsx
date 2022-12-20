@@ -1,8 +1,10 @@
 import React from "react";
 import ProjectCategory from "./ProjectCategory";
+import { motion } from "framer-motion";
 
 type Props = {
   page: string | null;
+  width: number;
 };
 
 const ProjectsDirectory = (props: Props) => {
@@ -14,7 +16,7 @@ const ProjectsDirectory = (props: Props) => {
         desktop: "../public/assets/home/desktop/image-web-design-large.jpg",
       },
       title: "web design",
-      path: "/projects/web+design/#",
+      path: "/projects/web+design",
       initialX: 300,
     },
 
@@ -25,7 +27,7 @@ const ProjectsDirectory = (props: Props) => {
         desktop: "../public/assets/home/desktop/image-graphic-design.jpg",
       },
       title: "graphic design",
-      path: "/projects/graphic+design/#",
+      path: "/projects/graphic+design",
       initialX: -300,
     },
 
@@ -36,7 +38,7 @@ const ProjectsDirectory = (props: Props) => {
         desktop: "../public/assets/home/desktop/image-app-design.jpg",
       },
       title: "app design",
-      path: "/projects/app+design/#",
+      path: "/projects/app+design ",
       initialX: 300,
     },
   ];
@@ -47,8 +49,22 @@ const ProjectsDirectory = (props: Props) => {
 
   console.log(categoriesFiltered);
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
       className={`flex lg:mb-[160px] flex-col px-6 md:px-10 gap-6 mb-24 lg:grid lg:gap-6 lg:px-[165px] lg:grid-cols-2 ${
         props.page === null
           ? "lg:grid-rows-[308px_308px]"
@@ -58,7 +74,7 @@ const ProjectsDirectory = (props: Props) => {
       {props.page === null
         ? categories.map((item, i) => (
             <ProjectCategory
-              initialX={item.initialX}
+              width={props.width}
               key={i}
               img={item.img}
               title={item.title}
@@ -70,7 +86,7 @@ const ProjectsDirectory = (props: Props) => {
           ))
         : categoriesFiltered.map((item, i) => (
             <ProjectCategory
-              initialX={item.initialX}
+              width={props.width}
               className={"lg:h-full"}
               key={i}
               img={item.img}
@@ -78,7 +94,7 @@ const ProjectsDirectory = (props: Props) => {
               path={item.path}
             />
           ))}
-    </div>
+    </motion.div>
   );
 };
 
