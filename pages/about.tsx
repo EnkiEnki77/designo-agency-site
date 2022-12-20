@@ -13,7 +13,7 @@ const about = (props: Props) => {
     <Layout>
       <div>
         <Header />
-        <div className="w-full lg:px-[160px]">
+        <div className="w-full lg:px-[160px] ">
           <Figure
             figure={false}
             img="image-about-hero.jpg"
@@ -23,6 +23,7 @@ const about = (props: Props) => {
           />
           <Figure
             figure={true}
+            even={true}
             title="World-class talent"
             img="image-world-class-talent.jpg"
             p1="We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. We are constantly updating our skills in a myriad of platforms."

@@ -14,6 +14,7 @@ const Offering = (props: Props) => {
     <motion.div
       initial={{ y: 300, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+      viewport={{ once: true }}
       className="flex flex-col md:flex-row lg:flex-col  items-center gap-8 "
     >
       <div className="min-w-[202px] min-h-[202px] h-auto relative">

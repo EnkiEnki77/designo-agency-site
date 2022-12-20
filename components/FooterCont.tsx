@@ -12,6 +12,7 @@ const FooterCont = (props: Props) => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 1 } }}
+      viewport={{ once: true }}
       className={` relative md:min-h-[337px] lg:min-h-[613px] lg:flex lg:flex-col lg:items-center ${
         props.locations && "lg:min-h-[320px]"
       }`}
