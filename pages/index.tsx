@@ -43,7 +43,7 @@ const Home: NextPage = () => {
     <Layout>
       <div className="relative overflow-hidden">
         <Head>
-          <title>Create Next App</title>
+          <title>Designo Agency Site</title>
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
