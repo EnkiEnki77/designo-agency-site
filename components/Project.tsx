@@ -10,7 +10,12 @@ type Props = {
 
 const Project = (props: Props) => {
   return (
-    <motion.figure className="h-[478px] md:h-[310px] rounded-[15px] overflow-hidden md:flex lg:w-full lg:h-full lg:flex-col">
+    <motion.figure
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="h-[478px] md:h-[310px] rounded-[15px] overflow-hidden md:flex lg:w-full lg:h-full lg:flex-col"
+    >
       <img
         className=" md:w-1/2 lg:w-full w-full h-full min-h-[310px] max-h-[320px] md:h-full lg:h-4/5"
         src={

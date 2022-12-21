@@ -9,7 +9,20 @@ type Props = {};
 
 const locations = (props: Props) => {
   const [yPosition, setYPosition] = useState(0);
+  const [width, setWidth] = useState(0);
   const [toggle, setToggle] = useState<boolean>(false);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+
+    const handleWidth = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWidth);
+
+    return () => window.removeEventListener("resize", handleWidth);
+  }, []);
 
   useEffect(() => {
     setYPosition(window.scrollY);
@@ -20,7 +33,7 @@ const locations = (props: Props) => {
     <Layout>
       <div>
         <Header toggle={toggle} setToggle={setToggle} />
-        <LocationCont />
+        <LocationCont width={width} />
         <FooterCont />
         <BackToTop yPosition={yPosition} toggle={toggle} />
       </div>

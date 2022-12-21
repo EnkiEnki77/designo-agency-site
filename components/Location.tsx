@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {
   img: string;
@@ -13,7 +14,9 @@ type Props = {
 const Location = (props: Props) => {
   console.log(props.country);
   return (
-    <figure
+    <motion.figure
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       id={
         props.country === "australia"
           ? props.country
@@ -55,7 +58,7 @@ const Location = (props: Props) => {
           </p>
         </div>
       </figcaption>
-    </figure>
+    </motion.figure>
   );
 };
 

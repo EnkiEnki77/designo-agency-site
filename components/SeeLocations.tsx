@@ -7,18 +7,21 @@ type Props = {
   country: string;
   path: string;
   even: boolean;
+  width: number;
+};
+
+const item = {
+  hidden: { opacity: 0, y: 100 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const SeeLocations = (props: Props) => {
   return (
     <motion.div
-      initial={{ x: props.even ? -300 : 300, opacity: 0 }}
-      whileInView={{
-        x: 0,
-        opacity: 1,
-        transition: { duration: 1, delay: 0.3 },
-      }}
       viewport={{ once: true }}
+      variants={item}
+      // initial={props.width < 1024 ? "hidden" : undefined}
+      // whileInView={props.width < 1024 ? "show" : undefined}
       className="flex flex-col items-center gap-8 "
     >
       <div className="max-w-[202px] w-full h-auto relative">
