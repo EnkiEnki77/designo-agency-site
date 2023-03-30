@@ -8,7 +8,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.13",
     "body-scroll-lock": "^4.0.0-beta.0",
-    "framer-motion": "^7.6.19",
+    "framer-motion": "^7.10.3",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0"

@@ -35,7 +35,7 @@ const Header = (props: Props) => {
   console.log(isLocked);
 
   return (
-    <motion.div className="fixed top-0 z-30 w-full">
+    <motion.div className=" z-30 w-full">
       <header className="bg-white lg:px-[165px] w-full py-[34px] md:py-16 flex items-center  justify-between px-6 md:px-10 fixed z-40">
         <Link href="/">
           <img
