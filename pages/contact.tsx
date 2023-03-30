@@ -34,7 +34,7 @@ const contact = (props: Props) => {
     <Layout>
       <div className="overflow-hidden">
         <Header toggle={toggle} setToggle={setToggle} />
-        <div className="md:px-10 md:pt-[155px] lg:px-[160px]">
+        <div className="md:px-10 lg:px-[160px]">
           <ContactForm />
           <SeeLocationsCont width={width} />
         </div>

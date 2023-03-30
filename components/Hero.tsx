@@ -12,7 +12,7 @@ const Hero = (props: Props) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="md:px-10  lg:px-[165px] md:pt-[155px] relative"
+      className="md:px-10  lg:px-[165px] relative"
     >
       <div className="lg:py-[145px] lg:w-full flex flex-col lg:flex-row md:rounded-[15px] overflow-hidden md:pt-[60px] items-center mb-[120px] lg:mb-[160px] px-6 pt-[96px] bg-[url('../public/assets/home/desktop/bg-pattern-hero-home.svg')] bg-[left_top_12.5rem] bg-peach w-full ">
         <div className="flex flex-col items-center lg:items-start lg:px-[96px]">

@@ -38,7 +38,7 @@ const LocationCont = (props: Props) => {
   return (
     <>
       {props.width !== 0 && (
-        <div className="flex flex-col  gap-10 lg:gap-8 pt-[96px] md:pt-[155px] mb-[120px] md:gap-[120px]">
+        <div className="flex flex-col  gap-10 lg:gap-8   mb-[120px] md:gap-[120px]">
           {locationInfo.map((location) => (
             <Location
               img={location.img}
